@@ -13,6 +13,7 @@ public class UserController {
 
 	@RequestMapping(value = "/displayForm.htm", method = RequestMethod.GET)
 	public String displayForm(Model model) {
+		System.out.println("Display Form Method Called ");
 		model.addAttribute("user", new User());
 		int i = 10;
 		return "userForm";
