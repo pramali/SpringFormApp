@@ -13,6 +13,7 @@ public class UserController {
 
 	@RequestMapping(value = "/displayForm.htm", method = RequestMethod.GET)
 	public String displayForm(Model model) {
+		System.out.println("In Display Form");
 		model.addAttribute("user", new User());
 		int i = 10;
 		return "userForm";
@@ -20,6 +21,7 @@ public class UserController {
 
 	@RequestMapping(value = "/regUser.htm", method = RequestMethod.POST)
 	public String regUser(Model model, @ModelAttribute("user") User u) {
+		System.out.println("In regUser");
 		model.addAttribute("user", u);
 		return "display";
 	}
